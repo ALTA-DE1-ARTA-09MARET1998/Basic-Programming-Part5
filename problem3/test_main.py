@@ -1,5 +1,5 @@
 import unittest
-from main import join_array_remove_duplicat
+from main import join_array_remove_duplicate
 
 class TestJoinArrayRemoveDuplicate(unittest.TestCase):
 

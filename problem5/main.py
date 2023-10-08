@@ -1,5 +1,16 @@
 def pair_sum(arr, target):
-    return []
+    result = []
+    if target == arr[-1]:
+        for i in range(len(arr)-1):
+            if arr[-2] + arr[i] == target:
+                result.append(i)
+                result.append(len(arr)-2)
+    else:
+        for i in range(len(arr)-1):
+            if arr[i] + arr[i+1] == target:
+                result.append(i)
+                result.append(i+1)
+    return result if result else None
 
 if __name__ == '__main__':
     print(pair_sum([1, 2, 3, 4, 6], 6)) # [1, 3]
